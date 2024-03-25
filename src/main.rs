@@ -30,4 +30,6 @@ fn main() {
     println!("Rectangle data, width={}, height={}", rect1.width, rect1.height);
 
     println!("Rectangle = {:?}", rect1);
+    println!("Rectangle = {:#?}", rect1);
+    // To pretty-print the struct we can use: {:#?}
 }
