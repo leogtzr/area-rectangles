@@ -31,5 +31,18 @@ fn main() {
 
     println!("Rectangle = {:?}", rect1);
     println!("Rectangle = {:#?}", rect1);
+
+    dbg!("Rectangle = {}", rect1);
     // To pretty-print the struct we can use: {:#?}
+    //
+    println!("---------------------------- ....... ---------------------------");
+
+    let scale = 2;
+
+    let rect2 = Rectangle {
+        width: dbg!(30 * scale),
+        height: 50,
+    };
+
+    dbg!(&rect2);
 }
