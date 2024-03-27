@@ -12,6 +12,12 @@ struct Rectangle {
     height: u32,
 }
 
+impl Rectangle {
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+}
+
 fn area(rectangle: &Rectangle) -> u32 {
     rectangle.width * rectangle.height
 }
@@ -32,17 +38,21 @@ fn main() {
     println!("Rectangle = {:?}", rect1);
     println!("Rectangle = {:#?}", rect1);
 
-    dbg!("Rectangle = {}", rect1);
+    //dbg!("Rectangle = {}", rect1);
     // To pretty-print the struct we can use: {:#?}
     //
     println!("---------------------------- ....... ---------------------------");
 
-    let scale = 2;
+    //let scale = 2;
 
-    let rect2 = Rectangle {
+    /*let rect2 = Rectangle {
         width: dbg!(30 * scale),
         height: 50,
-    };
+    };*/
 
-    dbg!(&rect2);
+    //dbg!(&rect2);
+    println!(
+        "The area of the rectangle is {} square pixels.",
+        rect1.area()
+    );
 }
