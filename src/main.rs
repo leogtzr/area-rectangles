@@ -16,6 +16,15 @@ impl Rectangle {
     fn area(&self) -> u32 {
         self.width * self.height
     }
+
+    fn width(&self) -> bool {
+        self.width > 0
+    }
+}
+
+impl Rectangle {
+    fn something(&self) {
+    }
 }
 
 fn area(rectangle: &Rectangle) -> u32 {
@@ -55,4 +64,8 @@ fn main() {
         "The area of the rectangle is {} square pixels.",
         rect1.area()
     );
+
+
+    // The names can be the same:
+    println!("Width: {}-{}", rect1.width, rect1.width());
 }
