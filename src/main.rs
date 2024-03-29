@@ -20,6 +20,13 @@ impl Rectangle {
     fn width(&self) -> bool {
         self.width > 0
     }
+
+    fn square(size: u32) -> Self {
+        Self {
+            width: size,
+            height: size,
+        }
+    }
 }
 
 impl Rectangle {
@@ -84,4 +91,7 @@ fn main() {
     };
 
     println!("Can rect1 hold rect2? {}", rect1.can_hold(&rectangle2));
+
+    let square = Rectangle::square(4);
+    println!("Square = {:?}", square);
 }
