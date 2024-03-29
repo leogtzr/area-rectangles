@@ -27,6 +27,12 @@ impl Rectangle {
     }
 }
 
+impl Rectangle {
+    fn can_hold(&self, other: &Rectangle) -> bool {
+        self.width > other.width && self.height > other.height
+    }
+} 
+
 fn area(rectangle: &Rectangle) -> u32 {
     rectangle.width * rectangle.height
 }
@@ -68,4 +74,14 @@ fn main() {
 
     // The names can be the same:
     println!("Width: {}-{}", rect1.width, rect1.width());
+    let rectangle1 = Rectangle {
+        width: 30,
+        height: 50,
+    };
+    let rectangle2 = Rectangle {
+        width: 10,
+        height: 40,
+    };
+
+    println!("Can rect1 hold rect2? {}", rect1.can_hold(&rectangle2));
 }
